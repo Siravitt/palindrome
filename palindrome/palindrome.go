@@ -15,10 +15,8 @@ func Palindrome(n int) bool {
 	}
 
 	for i := 0; i < len(s); i++ {
-		if string(s[i]) != "" && string(s[len(s)-1-i]) != "" {
-			if s[i] != s[len(s)-i-1] {
-				return false
-			}
+		if s[i] != s[len(s)-i-1] {
+			return false
 		}
 	}
 
