@@ -31,3 +31,13 @@ func TestNonRepeatChar(t *testing.T) {
 		t.Fatalf("input: %v want %v but got %v", input, want, res)
 	}
 }
+
+func TestNegativeChar(t *testing.T) {
+	input := -111
+	want := false
+
+	res := Palindrome(input)
+	if res != want {
+		t.Fatalf("input: %v want %v but got %v", input, want, res)
+	}
+}

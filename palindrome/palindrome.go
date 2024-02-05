@@ -1,6 +1,7 @@
 package palindrome
 
 import (
+	"math"
 	"strconv"
 )
 
@@ -10,11 +11,8 @@ import (
 
 func Palindrome(n int) bool {
 	s := strconv.Itoa(n)
-	if len(s) == 1 {
-		return true
-	}
 
-	for i := 0; i < len(s); i++ {
+	for i := 0; i < int(math.Floor(float64(len(s)))); i++ {
 		if s[i] != s[len(s)-i-1] {
 			return false
 		}
